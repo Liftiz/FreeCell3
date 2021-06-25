@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../files/paf.css" />
+    <link rel="stylesheet" type="text/css" href="css/freecell.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/timer.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script defer src="js/script.js" type="text/javascript"></script>
+    <script defer src="js/timer.js" type="text/javascript"></script>
+    <script defer type="text/javascript" src="js/menu.js"></script>
+    <script defer src="js/menu.js" type="text/javascript"></script>
+    <title>Freecell</title>
+</head>
+<body>
+
+    
+<div id="title">
+    <h1>Fre<span id="secret">e</span>cell</h1>
+    
+    <input type="hidden" id="set-time" value="1"/>
+    <div id="countdown">
+      
+      <div id='tiles' class="color-full"></div>
+      <div class="countdown-label">Timer</div>
+    </div>
+    <h2>
+        <button id="btnMenu" onclick="handleMenuBtn(), stopCount()">MENU</button>
+       
+        <div id="dialogMenu" style="display:none">
+            <div class="bigBtnBar">
+                <button onclick="handleOptionsNewGame()">New Game</button>
+                <button onclick="handleOptionsOpen()">Options</button>
+                <button onclick="$('#dialogMenu').dialog('close');">Resume</button>
+                
+            </div>
+        </div>
+    
+        <div id="dialogOptions" style="display:none">
+            <div class="label">Sound</div>
+            <fieldset>
+                <label for="chkOptSound"><input id="chkOptSound" type="checkbox" checked="checked"> Play Sounds</label>
+            </fieldset>
+    
+            <div class="label">Table Background</div>
+            <fieldset>
+                <div id="optBkgds" class="tableRows"></div>
+            </fieldset>
+    
+            <div style="margin:20px 0 0 0;">
+                <button class="coolBtn small" onclick="handleOptionsClose()">Close</button>
+            </div>
+        </div>
+        <div id="dialogMenu" style="display:none">
+		<div class="bigBtnBar">
+			<button onclick="handleOptionsNewGame()">New Game</button>
+			<button onclick="handleOptionsOpen()">Options</button>
+			<button onclick="$('#dialogMenu').dialog('close');">Resume</button>
+		</div>
+	</div>
+      
+    </h2>
+</div>
+<div id="table">
+    <div id="free0" class="free"></div>
+    <div id="free1" class="free"></div>
+    <div id="free2" class="free"></div>
+    <div id="free3" class="free"></div>
+
+    <div id="suit0" class="suit"></div>
+    <div id="suit1" class="suit"></div>
+    <div id="suit2" class="suit"></div>
+    <div id="suit3" class="suit"></div>
+
+    <div id="col0" class="column"></div>
+    <div id="col1" class="column"></div>
+    <div id="col2" class="column"></div>
+    <div id="col3" class="column"></div>
+    <div id="col4" class="column"></div>
+    <div id="col5" class="column"></div>
+    <div id="col6" class="column"></div>
+    <div id="col7" class="column"></div>
+</div>
+
+<div id="footer">
+  
+</div>
+
+<div id="windialog">
+<p>Bravo, vous avez gagné !</p>
+</div>
+
+
+
+</body>

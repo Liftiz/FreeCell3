@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../files/paf.css" />
+    <link rel="stylesheet" type="text/css" href="css/freecell.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/timer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js" type="text/javascript"></script>
+    <script defer src="js/script.js" type="text/javascript"></script>
+    <script defer src="js/timer2.js" type="text/javascript"></script>
+
+    <title>Freecell</title>
+</head>
+<body>
+<div id="title">
+    <h1>Fre<span id="secret">e</span>cell</h1>
+    <input type="hidden" id="set-time" value="1"/>
+    <div id="countdown">
+      
+      <div id='tiles' class="color-full"></div>
+      <div class="countdown-label">Timer</div>
+    </div>
+    <h2>
+        <button id="newgame">Nouveau jeu</button>
+        <button id="help">Help</button>
+    </h2>
+</div>
+<div id="table">
+    <div id="free0" class="free"></div>
+    <div id="free1" class="free"></div>
+    <div id="free2" class="free"></div>
+    <div id="free3" class="free"></div>
+
+    <div id="suit0" class="suit"></div>
+    <div id="suit1" class="suit"></div>
+    <div id="suit2" class="suit"></div>
+    <div id="suit3" class="suit"></div>
+
+    <div id="col0" class="column"></div>
+    <div id="col1" class="column"></div>
+    <div id="col2" class="column"></div>
+    <div id="col3" class="column"></div>
+    <div id="col4" class="column"></div>
+    <div id="col5" class="column"></div>
+    <div id="col6" class="column"></div>
+    <div id="col7" class="column"></div>
+</div>
+
+<div id="footer">
+  
+</div>
+
+<div id="windialog">
+<p>Bravo, vous avez gagné !</p>
+</div>
+
+<div id="helptext">
+<p>
+    FreeCell est un jeu de cartes de type solitaire qui se joue avec un jeu standard de 52 cartes.
+    Il est fondamentalement différent de la plupart des jeux de solitaire en ce que presque toutes les
+    cartes peuvent être résolues.
+</p>
+<p>Construction et disposition :</p>
+<ul>
+    <li>Un jeu de 52 cartes standard est utilisé.</li>
+    <li>Il y a quatre cellules ouvertes et quatre fondations ouvertes. Certaines règles alternatives
+    règles utilisent entre une et dix cellules.</li>
+    <li>Les cartes sont distribuées en huit cascades, dont quatre comprennent sept cartes...
+    et quatre d'entre elles en comprennent six. Certaines règles alternatives utilisent entre quatre et dix cascades.</li>
+</ul>
+</p> <p>Construction pendant le jeu :</p>
+<ul>
+    <li>La carte supérieure de chaque cascade commence un tableau.</li>
+    <li>Les tableaux doivent être construits vers le bas en alternant les couleurs.</li>
+    <li>Les fondations sont construites par couleur.</li>
+</ul>
+<p>Mouvements :</p>
+<ul>
+    <li>Toute carte cellule ou carte supérieure de n'importe quelle cascade peut être déplacée pour construire sur un
+    tableau, ou déplacée vers une cellule vide, une cascade vide, ou sa fondation.</li>
+    <li>Les tableaus complets ou partiels peuvent être déplacés pour construire sur des tableaus existants,
+    ou déplacés vers des cascades vides, en plaçant et retirant récursivement des cartes
+    par des emplacements intermédiaires. Alors que les implémentations informatiques montrent souvent
+    ce mouvement, les joueurs utilisant des jeux physiques déplacent généralement le tableau en
+    une seule fois.</li>
+</ul>
+
+<p>Victoire:</p>
+<ul>
+    <li>La partie est gagnée lorsque toutes les cartes sont déplacées vers leurs piles de base.</li>
+</ul>
+<p>Viens de  <a href="http://en.wikipedia.org/wiki/Freecell">Wikipedia.</a>
+</p>
+</div>
+
+</body>

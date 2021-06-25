@@ -1,0 +1,463 @@
+
+#titre{
+    position: relative;
+    margin-left: 850px;
+}
+
+.container {
+  height: 9vw;
+  width: 100vw;
+  text-align: center;
+  margin: 10px 0;
+  perspective: 800px;
+}
+
+.card {
+  width: 6vw;
+  height: 9vw;
+  border: 1px solid #999;
+  border-radius: 0.3vw;
+  position: relative;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  transition: transform 500ms ease 0ms;
+  transform-style: preserve-3d;
+}
+
+.card .number {
+  position: absolute;
+  font-size: 0.9230769231vw;
+  width: 0.9230769231vw;
+  height: 2vw;
+  text-align: center;
+}
+
+.card .number::after {
+  position: absolute;
+  font-size: 1.2vw;
+}
+
+.card .number:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+
+.card .number:nth-child(2) {
+  bottom: 0px;
+  right: 0px;
+  transform: rotate(180deg);
+}
+
+.card .number:nth-child(1)::after,
+.card .number:nth-child(2)::after {
+  position: absolute;
+  top: 0.6666666667vw;
+  left: 50%;
+  transform: translate3d(-50%, 0px, 0px);
+}
+
+.hearts,
+.diamonds {
+  color: #f00;
+}
+
+.clubs,
+.spades {
+  color: #000;
+}
+
+.hearts .number::after,
+.hearts span::after {
+  content: "♥";
+}
+
+.diamonds .number::after,
+.diamonds span::after {
+  content: "♦";
+}
+
+.clubs .number::after,
+.clubs span::after {
+  content: "♣";
+}
+
+.spades .number::after,
+.spades span::after {
+  content: "♠";
+}
+
+/* Center symbol positions */
+.middle {
+  height: 85%;
+  left: 7.5%;
+  position: absolute;
+  top: 7.5%;
+  width: 85%;
+}
+
+.middle span {
+  position: absolute;
+  display: block;
+  height: 1.5vw;
+  width: 1.5vw;
+}
+
+.middle span::after {
+  font-size: 2.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -0.3vw;
+}
+
+.picture .middle {
+  height: 80%;
+  left: 16%;
+  top: 10%;
+  width: 68%;
+  border: 1px solid #999;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/cards.jpg");
+  background-size: 12.3vw 28.8vw;
+}
+
+.card-J.clubs .middle {
+  background-position: 0 0;
+}
+
+.card-J.spades .middle {
+  background-position: 0 -276px;
+}
+
+.card-J.diamonds .middle {
+  background-position: 0 -415px;
+}
+
+.card-J.hearts .middle {
+  background-position: 0 -138px;
+}
+
+/* ACE */
+.card-1 .middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+}
+
+.card-1 .middle span {
+  position: relative;
+  height: 3vw;
+  width: 3vw;
+}
+
+.card-1 .middle span::after {
+  font-size: 3vw;
+}
+
+/* TWO */
+.card-2 .middle span {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.card-2 .middle span:nth-child(1) {
+  top: 0;
+}
+
+.card-2 .middle span:nth-child(2) {
+  bottom: 0;
+}
+
+.card-2 .middle span:nth-child(2) {
+  transform: rotate(180deg);
+  transform-origin: 25% 50% 0;
+}
+
+/* THREE */
+.card-3 .middle span {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.card-3 .middle span:nth-child(1) {
+  top: 0;
+}
+
+.card-3 .middle span:nth-child(2) {
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.card-3 .middle span:nth-child(3) {
+  bottom: 0;
+}
+
+.card-3 .middle span:nth-child(3) {
+  transform: rotate(180deg);
+  transform-origin: 25% 50% 0;
+}
+
+/* FOUR */
+.card-4 .middle span:nth-child(1),
+.card-4 .middle span:nth-child(3) {
+  left: 0.6vw;
+}
+
+.card-4 .middle span:nth-child(2),
+.card-4 .middle span:nth-child(4) {
+  right: 0.6vw;
+}
+
+.card-4 .middle span:nth-child(1),
+.card-4 .middle span:nth-child(2) {
+  top: 0;
+}
+
+.card-4 .middle span:nth-child(3),
+.card-4 .middle span:nth-child(4) {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+/* FIVE */
+.card-5 .middle span:nth-child(1),
+.card-5 .middle span:nth-child(3) {
+  left: 0.6vw;
+}
+
+.card-5 .middle span:nth-child(2),
+.card-5 .middle span:nth-child(4) {
+  right: 0.6vw;
+}
+
+.card-5 .middle span:nth-child(1),
+.card-5 .middle span:nth-child(2) {
+  top: 0;
+}
+
+.card-5 .middle span:nth-child(3),
+.card-5 .middle span:nth-child(4) {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.card-5 .middle span:nth-child(5) {
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/* SIX */
+.card-6 .middle span:nth-child(1),
+.card-6 .middle span:nth-child(3),
+.card-6 .middle span:nth-child(5) {
+  left: 0.6vw;
+}
+
+.card-6 .middle span:nth-child(2),
+.card-6 .middle span:nth-child(4),
+.card-6 .middle span:nth-child(6) {
+  right: 0.6vw;
+}
+
+.card-6 .middle span:nth-child(1),
+.card-6 .middle span:nth-child(2) {
+  top: 0;
+}
+
+.card-6 .middle span:nth-child(5),
+.card-6 .middle span:nth-child(6) {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.card-6 .middle span:nth-child(3),
+.card-6 .middle span:nth-child(4) {
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+/* SEVEN */
+.card-7 .middle span:nth-child(1),
+.card-7 .middle span:nth-child(3),
+.card-7 .middle span:nth-child(5) {
+  left: 0.6vw;
+}
+
+.card-7 .middle span:nth-child(2),
+.card-7 .middle span:nth-child(4),
+.card-7 .middle span:nth-child(6) {
+  right: 0.6vw;
+}
+
+.card-7 .middle span:nth-child(1),
+.card-7 .middle span:nth-child(2) {
+  top: 0;
+}
+
+.card-7 .middle span:nth-child(5),
+.card-7 .middle span:nth-child(6) {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.card-7 .middle span:nth-child(3),
+.card-7 .middle span:nth-child(4) {
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.card-7 .middle span:nth-child(7) {
+  top: 25%;
+  left: 50%;
+  transform: translate3d(-50%, -25%, 0);
+}
+
+/* EIGHT */
+.card-8 .middle span:nth-child(1),
+.card-8 .middle span:nth-child(3),
+.card-8 .middle span:nth-child(5) {
+  left: 0.6vw;
+}
+
+.card-8 .middle span:nth-child(2),
+.card-8 .middle span:nth-child(4),
+.card-8 .middle span:nth-child(6) {
+  right: 0.6vw;
+}
+
+.card-8 .middle span:nth-child(1),
+.card-8 .middle span:nth-child(2) {
+  top: 0;
+}
+
+.card-8 .middle span:nth-child(5),
+.card-8 .middle span:nth-child(6) {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.card-8 .middle span:nth-child(3),
+.card-8 .middle span:nth-child(4) {
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.card-8 .middle span:nth-child(7) {
+  top: 25%;
+  left: 50%;
+  transform: translate3d(-50%, -25%, 0);
+}
+
+.card-8 .middle span:nth-child(8) {
+  top: 75%;
+  left: 50%;
+  transform: translate3d(-50%, -75%, 0) rotate(180deg);
+}
+
+/* NINE */
+.card-9 .middle span:nth-child(1),
+.card-9 .middle span:nth-child(3),
+.card-9 .middle span:nth-child(5),
+.card-9 .middle span:nth-child(7) {
+  left: 0.6vw;
+}
+
+.card-9 .middle span:nth-child(2),
+.card-9 .middle span:nth-child(4),
+.card-9 .middle span:nth-child(6),
+.card-9 .middle span:nth-child(8) {
+  right: 0.6vw;
+}
+
+.card-9 .middle span:nth-child(1),
+.card-9 .middle span:nth-child(2) {
+  top: 0;
+}
+
+.card-9 .middle span:nth-child(3),
+.card-9 .middle span:nth-child(4) {
+  top: 25%;
+}
+
+.card-9 .middle span:nth-child(5),
+.card-9 .middle span:nth-child(6) {
+  bottom: 25%;
+}
+
+.card-9 .middle span:nth-child(7),
+.card-9 .middle span:nth-child(8) {
+  bottom: 0;
+}
+
+.card-9 .middle span:nth-child(5),
+.card-9 .middle span:nth-child(6),
+.card-9 .middle span:nth-child(7),
+.card-9 .middle span:nth-child(8) {
+  transform: rotate(180deg);
+}
+
+.card-9 .middle span:nth-child(9) {
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/* TEN */
+.card-10 .middle span:nth-child(1),
+.card-10 .middle span:nth-child(3),
+.card-10 .middle span:nth-child(5),
+.card-10 .middle span:nth-child(7) {
+  left: 0.6vw;
+}
+
+.card-10 .middle span:nth-child(2),
+.card-10 .middle span:nth-child(4),
+.card-10 .middle span:nth-child(6),
+.card-10 .middle span:nth-child(8) {
+  right: 0.6vw;
+}
+
+.card-10 .middle span:nth-child(1),
+.card-10 .middle span:nth-child(2) {
+  top: 0;
+}
+
+.card-10 .middle span:nth-child(3),
+.card-10 .middle span:nth-child(4) {
+  top: 25%;
+}
+
+.card-10 .middle span:nth-child(5),
+.card-10 .middle span:nth-child(6) {
+  bottom: 25%;
+}
+
+.card-10 .middle span:nth-child(7),
+.card-10 .middle span:nth-child(8) {
+  bottom: 0;
+}
+
+.card-10 .middle span:nth-child(5),
+.card-10 .middle span:nth-child(6),
+.card-10 .middle span:nth-child(7),
+.card-10 .middle span:nth-child(8) {
+  transform: rotate(180deg);
+}
+
+.card-10 .middle span:nth-child(9) {
+  left: 50%;
+  top: 16.6667%;
+  transform: translate3d(-50%, -16.6667%, 0);
+}
+
+.card-10 .middle span:nth-child(10) {
+  left: 50%;
+  bottom: 16.6667%;
+  transform: translate3d(-50%, 16.6667%, 0) rotate(180deg);
+}
+
+/* CUSTOM ICONS */

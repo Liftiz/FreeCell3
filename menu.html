@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Freecell-JS </title>
+	<link rel="icon" href="images/favicon.png">
+	<link rel="apple-touch-icon" href="images/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+
+</head>
+<body>
+
+
+	<div id="dialogMenu" style="display:none">
+		<div class="bigBtnBar">
+			<button onclick="handleOptionsNewGame()">New Game</button>
+			<button onclick="handleOptionsOpen()">Options</button>
+			<button onclick="$('#dialogMenu').dialog('close');">Resume</button>
+		</div>
+	</div>
+
+	<div id="dialogOptions" style="display:none">
+		<div class="label">Sound</div>
+		<fieldset>
+			<label for="chkOptSound"><input id="chkOptSound" type="checkbox" checked="checked"> Play Sounds</label>
+		</fieldset>
+
+		<div class="label">Table Background</div>
+		<fieldset>
+			<div id="optBkgds" class="tableRows"></div>
+		</fieldset>
+
+		<div style="margin:20px 0 0 0;">
+			<button class="coolBtn small" onclick="handleOptionsClose()">Close</button>
+		</div>
+	</div>
+</body>
+</html>
